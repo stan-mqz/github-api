@@ -30,19 +30,14 @@ const fetchData = (name) => {
 
         .then(data => {
 
-            const { id } = data;
-            const { login } = data;
-            const { followers } = data;
-            const { avatar_url } = data;
-            const {public_repos} = data;
+            const { id, login, followers, avatar_url, public_repos } = data;
             addELements(id, login, followers, avatar_url, public_repos)
-
-            console.log(data);
-            
-
         })
 
-        .catch(err => console.log(err))
+        .catch(err => {
+
+            throw new Error(err);
+        })
 
 }
 
