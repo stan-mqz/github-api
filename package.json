@@ -12,9 +12,7 @@
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "octokit": "^4.0.2",
     "sass": "^1.78.0"
-  },
-  "dependencies": {
-    "octokit": "^4.0.2"
   }
 }

@@ -1,30 +1,30 @@
 @use '../base/variables' as v;
 
-.content {
-   
-    
-    background-color: v.$bg-dark-cont;
+
+.content,
+.info {
     width: 40%;
-    height: 15rem;
     margin: 0 auto;
-    margin-top: 20%;
     border-radius: 1rem;
-    border: 3px solid v.$border-light;
-
-
-    
 }
 
-.description{
+.content {
+    height: 15rem;
+    background-color: v.$bg-dark-cont;
+    margin-top: 15%;
+    border: 3px solid v.$border-light;
+}
+
+.description {
     display: flex;
     align-items: center;
 
     .description__image {
-        
+
         width: 9rem;
     }
 
-    .description__text{
+    .description__text {
         color: v.$text-light;
         font-weight: bold;
     }
@@ -33,35 +33,35 @@
 
 
 .form {
-    
+
     display: flex;
     padding: 0 1rem 0 1rem;
     height: 3rem;
     flex-basis: 100%;
     margin-top: 2.5rem;
     gap: 1rem;
-    
+
 
     .form__text,
-    .form__submit{
-        color:  v.$text-light;
+    .form__submit {
+        color: v.$text-light;
         border: 2px solid v.$border-light;
         border-radius: 1rem;
         padding: .5rem;
         background-color: transparent
     }
 
-    .form__text{
+    .form__text {
         flex: 4;
 
-        &::placeholder{
-            color:  v.$text-light;
+        &::placeholder {
+            color: v.$text-light;
         }
 
     }
 
-    .form__submit{
-        flex: 1 ;
+    .form__submit {
+        flex: 1;
         cursor: pointer;
         text-transform: uppercase;
         font-weight: 700;
@@ -70,3 +70,38 @@
 
 }
 
+.info {
+    height: 22rem;
+    background-color: v.$bg-light;
+    margin-top: 2rem;
+
+    &-content {
+        display: flex;
+        border-bottom: 3px solid v.$bg-dark;
+        padding: 1rem 1rem 2rem 1rem;
+
+        img {
+            width: 7rem;
+        }
+
+        p {
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+    }
+
+}
+
+ul {
+
+    background-color: v.$bg-dark-cont;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin-top: 2rem;
+
+    li {
+        font-weight: bold;
+        margin-bottom: .3rem;
+        color: v.$text-light;
+    }
+}
