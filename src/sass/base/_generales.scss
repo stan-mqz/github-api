@@ -1,26 +1,32 @@
 @use './variables' as v;
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-     font-size: 16px;
-     background-color: v.$bg-dark;
-     font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 16px;
+  background-color: v.$bg-dark;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 
-li{
-  
+li {
+
   list-style: none;
 }

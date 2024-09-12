@@ -1,30 +1,58 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 
 .content,
 .info {
-    width: 40%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 1rem;
+    font-size: 1rem;
+
+    @include m.tablet{
+        font-size: 2rem;
+        width: 70%;
+    }
+
+    @include m.desktop{
+        width: 50%;
+    }
 }
 
+
 .content {
-    height: 17rem;
+    height: 27rem;
     background-color: v.$bg-dark-cont;
-    margin-top: 15%;
     border: 3px solid v.$border-light;
+
+    @include m.telefono{
+        height: 20rem;
+    }
+
+    @include m.tablet{
+        height: 17rem;
+    }
 }
+
+
 
 .description {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin: 2rem 0 2.5rem 0;
 
-    .description__image {
+    @include m.telefono{
+        flex-direction: row;
+        margin: 0;
+    }
+
+    &__image {
 
         width: 9rem;
     }
 
-    .description__text {
+    &__text {
         color: v.$text-light;
         font-weight: bold;
     }
@@ -35,23 +63,28 @@
 .form {
 
     display: flex;
+    flex-direction: column;
     padding: 0 1rem 0 1rem;
     height: 3rem;
     flex-basis: 100%;
     margin-top: 2.5rem;
     gap: 1rem;
 
+    @include m.tablet {
 
-    .form__text,
-    .form__submit {
+        flex-direction: row;
+    }
+
+    &__text,
+    &__submit {
         color: v.$text-light;
         border: 2px solid v.$border-light;
         border-radius: 1rem;
         padding: .5rem;
-        background-color: transparent
+        background-color: transparent;
     }
 
-    .form__text {
+    &__text {
         flex: 4;
 
         &::placeholder {
@@ -60,7 +93,7 @@
 
     }
 
-    .form__submit {
+    &__submit {
         flex: 1;
         cursor: pointer;
         text-transform: uppercase;
@@ -76,6 +109,7 @@
     margin-top: 2rem;
 
     &-content {
+        font-size: 2rem;
         display: flex;
         border-bottom: 3px solid v.$bg-dark;
         padding: 1rem 1rem 2rem 1rem;
@@ -97,7 +131,12 @@ ul {
     background-color: v.$bg-dark-cont;
     padding: 1rem;
     padding-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+
+
+    @include m.tablet{
+        margin-top: 1rem;
+    }
 
     li {
         font-weight: bold;
