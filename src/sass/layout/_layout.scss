@@ -9,6 +9,10 @@
     border-radius: 1rem;
     font-size: 1rem;
 
+    @include m.telefono{
+        width: 55%;
+    }
+
     @include m.tablet{
         font-size: 2rem;
         width: 70%;
@@ -111,16 +115,28 @@
     &-content {
         font-size: 2rem;
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         border-bottom: 3px solid v.$bg-dark;
         padding: 1rem 1rem 2rem 1rem;
+        margin: 0;
+
+        @include m.telefono{
+            flex-direction: row;
+        }
 
         img {
             width: 7rem;
         }
 
         p {
-            margin-left: 1rem;
+            
+            margin: 1rem 0 0 .2rem;
             font-weight: bold;
+
+            @include m.tablet{
+                margin: 1rem 0 0 1rem;
+            }
         }
     }
 
@@ -131,8 +147,11 @@ ul {
     background-color: v.$bg-dark-cont;
     padding: 1rem;
     padding-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 
+    @include m.telefono{
+        margin-top: 3rem;
+    }
 
     @include m.tablet{
         margin-top: 1rem;
