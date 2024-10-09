@@ -1,6 +1,6 @@
 # GitHub-API 
 
-[Live Demo](https://stan-mqz.github.io/github-api/)
+[Live Demo](https://stan-mqz-project-githubapi.netlify.app/)
 
 This project allows you to retrieve and display basic information about a GitHub user. By entering a username in a form, the user's data—such as avatar, username, ID, number of followers, and public repositories—will be displayed dynamically on a card.
 
