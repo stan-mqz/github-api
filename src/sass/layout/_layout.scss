@@ -112,7 +112,7 @@
     background-color: v.$bg-light;
     margin-top: 2rem;
 
-    &-content {
+    &__content {
         font-size: 2rem;
         display: flex;
         flex-direction: column;
@@ -121,25 +121,33 @@
         padding: 1rem 1rem 2rem 1rem;
         margin: 0;
 
-        @include m.telefono{
+        @include m.telefono {
             flex-direction: row;
-        }
-
-        img {
-            width: 7rem;
-        }
-
-        p {
-            
-            margin: 1rem 0 0 .2rem;
-            font-weight: bold;
-
-            @include m.tablet{
-                margin: 1rem 0 0 1rem;
-            }
         }
     }
 
+    &__img {
+        width: 7rem;
+    }
+
+    &__name {
+        margin: 1rem 0 0 .2rem;
+        font-weight: bold;
+
+        @include m.tablet {
+            margin: 1rem 0 0 1rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__list-item {
+        margin-top: 0.5rem;
+    }
 }
 
 ul {

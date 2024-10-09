@@ -43,8 +43,7 @@ const fetchData = (name) => {
 
 
 const addELements = (id, login, followers, avatar_url, public_repos ) => {
-
-    const body = document.querySelector('body')
+    const body = document.querySelector('body');
     const info = document.createElement('DIV');
     const infoContent = document.createElement('DIV');
     const img = document.createElement('IMG');
@@ -53,17 +52,22 @@ const addELements = (id, login, followers, avatar_url, public_repos ) => {
     const idUser = document.createElement('LI');
     const followersUser = document.createElement('LI');
     const repositoriesUser = document.createElement('LI');
-
-
-
+    
     info.classList.add('info');
-    infoContent.classList.add('info-content');
+    infoContent.classList.add('info__content');
+    img.classList.add('info__img');
+    p.classList.add('info__name');
+    ul.classList.add('info__list');
+    idUser.classList.add('info__list-item');
+    followersUser.classList.add('info__list-item');
+    repositoriesUser.classList.add('info__list-item');
+    
     img.src = avatar_url;
     p.innerText = login;
     idUser.innerText = `ID: ${id}`;
     followersUser.innerText = `Seguidores: ${followers}`;
     repositoriesUser.innerText = `Repositorios públicos: ${public_repos}`;
-
+    
     body.appendChild(info);
     info.appendChild(infoContent);
     infoContent.appendChild(img);
@@ -72,6 +76,7 @@ const addELements = (id, login, followers, avatar_url, public_repos ) => {
     ul.appendChild(idUser);
     ul.appendChild(followersUser);
     ul.appendChild(repositoriesUser);
+    
 
     // setTimeout(() => {
         
