@@ -1,4 +1,4 @@
-# GitHub--API 
+# GitHub-API 
 
 [Live Demo](https://stan-mqz.github.io/github-api/)
 
